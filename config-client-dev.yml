@@ -1,3 +1,23 @@
 hello: nihao
 server:
-  port: 8080
+  port: 8881
+spring:
+  application:
+    name: config-client
+  rabbitmq:
+    port: 5672
+    host: 39.108.77.108
+    username: csj
+    password: 123456
+  cloud:
+    config:
+      discovery:
+        service-id: config-server
+        enabled: true
+      profile: dev
+      label: master
+#      name: config-client
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
