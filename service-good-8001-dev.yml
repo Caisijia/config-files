@@ -2,6 +2,8 @@ server:
   port: 8001
 
 mybatis:
+  configuration:
+      call-setters-on-nulls: true
   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
   type-aliases-package: com.csj.cloud.entities   # 所有Entity别名类所在包
   mapper-locations: classpath:mybatis/mapper/*.xml                       # mapper映射文件
