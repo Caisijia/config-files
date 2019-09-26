@@ -8,6 +8,9 @@ mybatis:
   type-aliases-package: com.csj.cloud.entities   # 所有Entity别名类所在包
   mapper-locations: classpath:mybatis/mapper/*.xml                       # mapper映射文件
 spring:
+  jackson:
+    #设置空如何序列化
+    defaultPropertyInclusion: ALWAYS
   application:
     name: service-good
   datasource:
