@@ -6,6 +6,18 @@ mybatis:
   type-aliases-package: com.csj.cloud.entities   # 所有Entity别名类所在包
   mapper-locations: classpath:mybatis/mapper/*.xml                       # mapper映射文件
 spring:
+  redis:
+    port: 6379
+    database: 0
+    host: 127.0.0.1
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+    timeout: 5000ms
   jackson:
     #设置空如何序列化
     defaultPropertyInclusion: ALWAYS
