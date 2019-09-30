@@ -9,7 +9,7 @@ spring:
   redis:
     #redis的数据库缩影,默认0
     database: 3
-    host: localhost
+    host: 127.0.0.1
     port: 6379
     password:
     timeout: 0
@@ -19,13 +19,6 @@ spring:
         max-wait: -1
         max-idle: 10
         min-idle: 2
-    lettuce:
-      pool:
-        max-active: 1000
-        max-wait: -1
-        max-idle: 10
-        min-idle: 2
-        shutdown-timeout: 100ms
   jackson:
     #设置空如何序列化
     defaultPropertyInclusion: ALWAYS
